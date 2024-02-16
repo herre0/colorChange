@@ -4,12 +4,14 @@ import { CoursesComponent } from './courses/courses.component';
 import { AuthorsComponent } from './authors/authors.component';
 import { AppComponent } from './app.component';
 import { PokemonComponent } from './pokemon/pokemon.component';
+import { BooklistComponent } from './booklist/booklist.component';
 
 
 const routes: Routes = [
   { path: "courses", component: CoursesComponent },
   { path: "authors", component: AuthorsComponent },
-  { path: "pokemon", component: PokemonComponent }
+  { path: "pokemon", component: PokemonComponent },
+  { path: "booklist", component: BooklistComponent }
 ];
 
 @NgModule({

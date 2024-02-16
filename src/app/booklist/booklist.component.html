@@ -1,0 +1,41 @@
+<p>booklist works!</p>
+<input type="text" (keyup)="search()" [(ngModel)]="searchtext" name="search">
+<div style="display: flex;">
+<div class="main-card">
+    <div class="card" *ngFor="let book of books" (click)="addToWishList(book.title)">
+        <div class="image"><img src="{{book?.imageUrl}}"  /></div>
+        <div>
+            <h3 >{{book?.title}}</h3>
+            <b>Author(s): </b>{{book?.authors?.join(', ')}} <br>
+            <b>Publisher: </b>{{book?.publisher}}<br>
+            <b>Published Date: </b>{{book?.publishedDate}}<br>
+            <b>Description: </b>{{book?.description}}<br>
+        </div>
+        <br>
+    </div>
+    
+</div>
+
+<div class="wishlist-card">
+    <h3>WishList ({{wishList.length}})</h3>
+    <hr>
+    <ul>
+        <li *ngFor="let book of wishList">
+            {{book.title}}
+            <input type="button" style="float:right;" value="X" (click)="remove(book.title)"/>
+        </li>
+    </ul>
+</div>
+</div>
+<style>
+    .main-card {
+        max-width: 75%;
+    }
+    .wishlist-card {
+        width: 25%;
+
+        background-color: green;
+    }
+</style>
+
+

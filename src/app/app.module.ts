@@ -8,18 +8,22 @@ import { AuthorsComponent } from './authors/authors.component';
 import { PokemonComponent } from './pokemon/pokemon.component';
 import { pokemonService } from './pokemon/pokemon.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { BooklistComponent } from './booklist/booklist.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     CoursesComponent,
     AuthorsComponent,
-    PokemonComponent
+    PokemonComponent,
+    BooklistComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
