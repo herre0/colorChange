@@ -10,6 +10,7 @@ import { pokemonService } from './pokemon/pokemon.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BooklistComponent } from './booklist/booklist.component';
 import { FormsModule } from '@angular/forms';
+import { ColorChangeComponent } from './color-change/color-change.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     CoursesComponent,
     AuthorsComponent,
     PokemonComponent,
-    BooklistComponent
+    BooklistComponent,
+    ColorChangeComponent
   ],
   imports: [
     BrowserModule,

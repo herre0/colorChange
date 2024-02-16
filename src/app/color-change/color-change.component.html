@@ -1,0 +1,13 @@
+<h2 [style.color]="clickedColor">HEADER</h2>
+<div *ngFor="let item of data">
+  <div style="border: 3px solid {{ item.color }}">
+    <h3>{{ item.title }}</h3>
+    <p>{{ item.body }}</p>
+    <input
+      type="button"
+      value="{{ item.color }}"
+      style="background-color:{{ item.color }}"
+      (click)="changeColor(item.color)"
+    />
+  </div>
+</div>
